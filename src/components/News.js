@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+
 import NewsItems from "./NewsItems";
 import { useEffect, useState } from "react";
 import Spinner from "./Spinner";
