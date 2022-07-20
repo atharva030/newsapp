@@ -21,7 +21,7 @@ const News = (props) => {
     
   const updateNews = async () => {
     // const url = `https://newsapi.org/v2/top-headlines?country=&category=${props.category}&apiKey=36c5070cdf664df2adea6888717a5461&page=${page}&pageSize=${props.pageSize}`;
-  const url=`https://saurav.tech/NewsAPI/top-headlines/category/${props.category}/${props.country}.json`
+    const url=`https://saurav.tech/NewsAPI/top-headlines/category/${props.category}/${props.country}.json`
     setLoader(true); //Extras
     let data = await fetch(url);
     let parsedData = await data.json();
@@ -34,18 +34,18 @@ const News = (props) => {
   }, []);
   // useeffect will act as a componentDidMount
 
-  const handlePrevClick = async () => {
-    setPage(page - 1);
-    updateNews();
-  };
-  const handleNextClick = async () => {
-    setPage(page + 1);
-    updateNews();
-  };
+  // const handlePrevClick = async () => {
+  //   setPage(page - 1);
+  //   updateNews();
+  // };
+  // const handleNextClick = async () => {
+  //   setPage(page + 1);
+  //   updateNews();
+  // };
 
   const fetchMoreData = async () => {
     setPage(page + 1);
-    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=36c5070cdf664df2adea6888717a5461&page=${page}&pageSize=${props.pageSize}`;
+    const url = `https://saurav.tech/NewsAPI/top-headlines/category/${props.category}/${props.country}.json`;
     setLoader(true);
     let data = await fetch(url);
     let parsedData = await data.json();

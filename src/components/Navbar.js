@@ -67,7 +67,7 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-
+{/* 
         <div className="btn-group" style={{ margin: "0 10rem" }}>
           <button
             type="button"
@@ -100,7 +100,7 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-        </div>
+        </div> */}
       </nav>
     </>
   );
