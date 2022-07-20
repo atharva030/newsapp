@@ -20,8 +20,8 @@ const News = (props) => {
     )}- AbTak`;
     
   const updateNews = async () => {
-    const url = `https://newsapi.org/v2/top-headlines?country=&category=${props.category}&apiKey=36c5070cdf664df2adea6888717a5461&page=${page}&pageSize=${props.pageSize}`;
-  //  const url=`https://saurav.tech/NewsAPI/top-headlines/category/${props.category}/${props.country}.json`
+    // const url = `https://newsapi.org/v2/top-headlines?country=&category=${props.category}&apiKey=36c5070cdf664df2adea6888717a5461&page=${page}&pageSize=${props.pageSize}`;
+  const url=`https://saurav.tech/NewsAPI/top-headlines/category/${props.category}/${props.country}.json`
     setLoader(true); //Extras
     let data = await fetch(url);
     let parsedData = await data.json();
